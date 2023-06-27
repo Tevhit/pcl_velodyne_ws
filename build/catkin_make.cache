@@ -1,2 +1,2 @@
-velodyne_description:velodyne_gazebo_plugins
+basic_pcl:velodyne_description:velodyne_gazebo_plugins
 -DCATKIN_DEVEL_PREFIX=/home/tevhit/pcl_velodyne_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tevhit/pcl_velodyne_ws/install -G Unix Makefiles

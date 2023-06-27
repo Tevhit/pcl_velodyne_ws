@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/tevhit/pcl_velodyne_ws/build/gtest/cmake_install.cmake")
   include("/home/tevhit/pcl_velodyne_ws/build/velodyne_description/cmake_install.cmake")
+  include("/home/tevhit/pcl_velodyne_ws/build/basic_pcl/cmake_install.cmake")
   include("/home/tevhit/pcl_velodyne_ws/build/velodyne_gazebo_plugins/cmake_install.cmake")
 
 endif()
