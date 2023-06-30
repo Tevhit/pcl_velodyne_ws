@@ -1,2 +1,0 @@
-basic_pcl:turtlebot3_velodyne/turtlebot3_teleop:turtlebot3_velodyne/turtlebot3_velodyne_description:turtlebot3_velodyne/turtlebot3_velodyne_gazebo:velodyne_description:velodyne_gazebo_plugins
--DCATKIN_DEVEL_PREFIX=/home/tevhit/pcl_velodyne_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tevhit/pcl_velodyne_ws/install -G Unix Makefiles

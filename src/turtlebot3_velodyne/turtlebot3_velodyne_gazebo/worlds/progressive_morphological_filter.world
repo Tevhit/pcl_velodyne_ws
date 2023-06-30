@@ -1,0 +1,2990 @@
+<sdf version="1.4">
+  <world name="default">
+
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <precon_iters>0</precon_iters>
+          <sor>1.400000</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>2000.000000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01000</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+<model name='drc_practice_angled_barrier_135'>
+      <static>1</static>
+      <frame name='one::__model__' attached_to='one::link'>
+        <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='one::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='two::__model__' attached_to='two::link'>
+        <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='two::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='three::__model__' attached_to='three::link'>
+        <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='three::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='four::__model__' attached_to='four::link'>
+        <pose relative_to='__model__'>5.13431 0.54837 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='four::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='five::__model__' attached_to='five::link'>
+        <pose relative_to='__model__'>6.3884 1.79074 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='five::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='six::__model__' attached_to='six::link'>
+        <pose relative_to='__model__'>7.6423 3.03258 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='six::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='seven::__model__' attached_to='seven::link'>
+        <pose relative_to='__model__'>8.89611 4.27529 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='seven::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='eight::__model__' attached_to='eight::link'>
+        <pose relative_to='__model__'>10.1496 5.51614 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='eight::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='nine::__model__' attached_to='nine::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='nine::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='ten::__model__' attached_to='ten::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0.866 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='ten::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.92643 -7.58068 0 0 -0 0</pose>
+    </model>
+    <model name='drc_practice_angled_barrier_45'>
+      <static>1</static>
+      <frame name='one::__model__' attached_to='one::link'>
+        <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='one::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='two::__model__' attached_to='two::link'>
+        <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='two::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='three::__model__' attached_to='three::link'>
+        <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='three::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='four::__model__' attached_to='four::link'>
+        <pose relative_to='__model__'>5.2559 -0.59667 0 0 0 -2.3562</pose>
+      </frame>
+      <static>1</static>
+      <link name='four::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='five::__model__' attached_to='five::link'>
+        <pose relative_to='__model__'>6.49818 -1.85004 0 0 0 -2.3562</pose>
+      </frame>
+      <static>1</static>
+      <link name='five::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='six::__model__' attached_to='six::link'>
+        <pose relative_to='__model__'>7.74031 -3.10261 0 0 0 -2.3562</pose>
+      </frame>
+      <static>1</static>
+      <link name='six::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='seven::__model__' attached_to='seven::link'>
+        <pose relative_to='__model__'>8.98256 -4.3561 0 0 0 -2.3562</pose>
+      </frame>
+      <static>1</static>
+      <link name='seven::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='eight::__model__' attached_to='eight::link'>
+        <pose relative_to='__model__'>10.2248 -5.60978 0 0 0 -2.3562</pose>
+      </frame>
+      <static>1</static>
+      <link name='eight::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='nine::__model__' attached_to='nine::link'>
+        <pose relative_to='__model__'>11.0288 -6.44203 0 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='nine::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='ten::__model__' attached_to='ten::link'>
+        <pose relative_to='__model__'>11.0288 -6.44203 0.866 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='ten::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-3.11091 4.71456 0 0 -0 0</pose>
+    </model>
+        <model name='drc_practice_angled_barrier_135'>
+          <static>1</static>
+          <frame name='one::__model__' attached_to='one::link'>
+            <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+          </frame>
+          <static>1</static>
+          <link name='one::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='two::__model__' attached_to='two::link'>
+            <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+          </frame>
+          <static>1</static>
+          <link name='two::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='three::__model__' attached_to='three::link'>
+            <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+          </frame>
+          <static>1</static>
+          <link name='three::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='four::__model__' attached_to='four::link'>
+            <pose relative_to='__model__'>5.13431 0.54837 0 0 0 -0.785398</pose>
+          </frame>
+          <static>1</static>
+          <link name='four::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='five::__model__' attached_to='five::link'>
+            <pose relative_to='__model__'>6.3884 1.79074 0 0 0 -0.785398</pose>
+          </frame>
+          <static>1</static>
+          <link name='five::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='six::__model__' attached_to='six::link'>
+            <pose relative_to='__model__'>7.6423 3.03258 0 0 0 -0.785398</pose>
+          </frame>
+          <static>1</static>
+          <link name='six::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='seven::__model__' attached_to='seven::link'>
+            <pose relative_to='__model__'>8.89611 4.27529 0 0 0 -0.785398</pose>
+          </frame>
+          <static>1</static>
+          <link name='seven::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='eight::__model__' attached_to='eight::link'>
+            <pose relative_to='__model__'>10.1496 5.51614 0 0 0 -0.785398</pose>
+          </frame>
+          <static>1</static>
+          <link name='eight::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='nine::__model__' attached_to='nine::link'>
+            <pose relative_to='__model__'>11.0288 6.44203 0 0 -0 0</pose>
+          </frame>
+          <static>1</static>
+          <link name='nine::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <frame name='ten::__model__' attached_to='ten::link'>
+            <pose relative_to='__model__'>11.0288 6.44203 0.866 0 -0 0</pose>
+          </frame>
+          <static>1</static>
+          <link name='ten::link'>
+            <visual name='visual'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                </mesh>
+              </geometry>
+            </visual>
+            <collision name='collision'>
+              <geometry>
+                <mesh>
+                  <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                </mesh>
+              </geometry>
+              <max_contacts>10</max_contacts>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+                <friction>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+            <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+          <pose>2.92643 -7.58068 0 0 -0 0</pose>
+        </model>
+        <model name='drc_practice_angled_barrier_45'>
+              <static>1</static>
+              <frame name='one::__model__' attached_to='one::link'>
+                <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+              </frame>
+              <static>1</static>
+              <link name='one::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='two::__model__' attached_to='two::link'>
+                <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+              </frame>
+              <static>1</static>
+              <link name='two::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='three::__model__' attached_to='three::link'>
+                <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+              </frame>
+              <static>1</static>
+              <link name='three::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='four::__model__' attached_to='four::link'>
+                <pose relative_to='__model__'>5.2559 -0.59667 0 0 0 -2.3562</pose>
+              </frame>
+              <static>1</static>
+              <link name='four::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='five::__model__' attached_to='five::link'>
+                <pose relative_to='__model__'>6.49818 -1.85004 0 0 0 -2.3562</pose>
+              </frame>
+              <static>1</static>
+              <link name='five::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='six::__model__' attached_to='six::link'>
+                <pose relative_to='__model__'>7.74031 -3.10261 0 0 0 -2.3562</pose>
+              </frame>
+              <static>1</static>
+              <link name='six::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='seven::__model__' attached_to='seven::link'>
+                <pose relative_to='__model__'>8.98256 -4.3561 0 0 0 -2.3562</pose>
+              </frame>
+              <static>1</static>
+              <link name='seven::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='eight::__model__' attached_to='eight::link'>
+                <pose relative_to='__model__'>10.2248 -5.60978 0 0 0 -2.3562</pose>
+              </frame>
+              <static>1</static>
+              <link name='eight::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='nine::__model__' attached_to='nine::link'>
+                <pose relative_to='__model__'>11.0288 -6.44203 0 0 -0 0</pose>
+              </frame>
+              <static>1</static>
+              <link name='nine::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <frame name='ten::__model__' attached_to='ten::link'>
+                <pose relative_to='__model__'>11.0288 -6.44203 0.866 0 -0 0</pose>
+              </frame>
+              <static>1</static>
+              <link name='ten::link'>
+                <visual name='visual'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                    </mesh>
+                  </geometry>
+                </visual>
+                <collision name='collision'>
+                  <geometry>
+                    <mesh>
+                      <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+                    </mesh>
+                  </geometry>
+                  <max_contacts>10</max_contacts>
+                  <surface>
+                    <contact>
+                      <ode/>
+                    </contact>
+                    <bounce/>
+                    <friction>
+                      <torsional>
+                        <ode/>
+                      </torsional>
+                      <ode/>
+                    </friction>
+                  </surface>
+                </collision>
+                <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+                <self_collide>0</self_collide>
+                <enable_wind>0</enable_wind>
+                <kinematic>0</kinematic>
+              </link>
+              <pose>-3.11091 4.71456 0 0 -0 0</pose>
+            </model>
+<model name='drc_practice_angled_barrier_135_clone'>
+      <static>1</static>
+      <frame name='one::__model__' attached_to='one::link'>
+        <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='one::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='two::__model__' attached_to='two::link'>
+        <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='two::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='three::__model__' attached_to='three::link'>
+        <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='three::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='four::__model__' attached_to='four::link'>
+        <pose relative_to='__model__'>5.13431 0.54837 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='four::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='five::__model__' attached_to='five::link'>
+        <pose relative_to='__model__'>6.3884 1.79074 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='five::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='six::__model__' attached_to='six::link'>
+        <pose relative_to='__model__'>7.6423 3.03258 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='six::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='seven::__model__' attached_to='seven::link'>
+        <pose relative_to='__model__'>8.89611 4.27529 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='seven::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='eight::__model__' attached_to='eight::link'>
+        <pose relative_to='__model__'>10.1496 5.51614 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='eight::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='nine::__model__' attached_to='nine::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='nine::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='ten::__model__' attached_to='ten::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0.866 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='ten::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>13.6304 1.3826 0 0 -0 0</pose>
+    </model>
+    <model name='drc_practice_angled_barrier_135_clone_clone'>
+      <static>1</static>
+      <frame name='one::__model__' attached_to='one::link'>
+        <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='one::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='two::__model__' attached_to='two::link'>
+        <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='two::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='three::__model__' attached_to='three::link'>
+        <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='three::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='four::__model__' attached_to='four::link'>
+        <pose relative_to='__model__'>5.13431 0.54837 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='four::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='five::__model__' attached_to='five::link'>
+        <pose relative_to='__model__'>6.3884 1.79074 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='five::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='six::__model__' attached_to='six::link'>
+        <pose relative_to='__model__'>7.6423 3.03258 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='six::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='seven::__model__' attached_to='seven::link'>
+        <pose relative_to='__model__'>8.89611 4.27529 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='seven::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='eight::__model__' attached_to='eight::link'>
+        <pose relative_to='__model__'>10.1496 5.51614 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='eight::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='nine::__model__' attached_to='nine::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='nine::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='ten::__model__' attached_to='ten::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0.866 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='ten::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.40546 8.28183 0 0 -0 1.84573</pose>
+    </model>
+    <model name='drc_practice_angled_barrier_135_clone_0'>
+      <static>1</static>
+      <frame name='one::__model__' attached_to='one::link'>
+        <pose relative_to='__model__'>0 0 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='one::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='one::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='two::__model__' attached_to='two::link'>
+        <pose relative_to='__model__'>1.7646 -0.008563 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='two::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='two::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='three::__model__' attached_to='three::link'>
+        <pose relative_to='__model__'>3.52922 -0.016171 0 0 0 -1.5707</pose>
+      </frame>
+      <static>1</static>
+      <link name='three::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='three::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='four::__model__' attached_to='four::link'>
+        <pose relative_to='__model__'>5.13431 0.54837 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='four::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='four::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='five::__model__' attached_to='five::link'>
+        <pose relative_to='__model__'>6.3884 1.79074 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='five::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='five::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='six::__model__' attached_to='six::link'>
+        <pose relative_to='__model__'>7.6423 3.03258 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='six::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='six::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='seven::__model__' attached_to='seven::link'>
+        <pose relative_to='__model__'>8.89611 4.27529 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='seven::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_orange_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='seven::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='eight::__model__' attached_to='eight::link'>
+        <pose relative_to='__model__'>10.1496 5.51614 0 0 0 -0.785398</pose>
+      </frame>
+      <static>1</static>
+      <link name='eight::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='eight::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='nine::__model__' attached_to='nine::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='nine::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='nine::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <frame name='ten::__model__' attached_to='ten::link'>
+        <pose relative_to='__model__'>11.0288 6.44203 0.866 0 -0 0</pose>
+      </frame>
+      <static>1</static>
+      <link name='ten::link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_blue_cylinder/meshes/cylinder.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <pose relative_to='ten::__model__'>0 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-8.428 -9.46156 0 0 -0 0</pose>
+    </model>
+     <model name='drc_practice_angled_barrier_135'>
+            <pose>2.92643 -7.58068 0 0 -0 0</pose>
+            <scale>1 1 1</scale>
+            <link name='eight::link'>
+              <pose>13.076 -2.06454 0 0 0 -0.785398</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='five::link'>
+              <pose>9.31483 -5.78994 0 0 0 -0.785398</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='four::link'>
+              <pose>8.06074 -7.03231 0 0 0 -0.785398</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='nine::link'>
+              <pose>13.9552 -1.13865 0 0 -0 0</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='one::link'>
+              <pose>2.92643 -7.58068 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='seven::link'>
+              <pose>11.8225 -3.30539 0 0 0 -0.785398</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='six::link'>
+              <pose>10.5687 -4.5481 0 0 0 -0.785398</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='ten::link'>
+              <pose>13.9552 -1.13865 0.866 0 -0 0</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='three::link'>
+              <pose>6.45565 -7.59685 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='two::link'>
+              <pose>4.69103 -7.58924 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+          <model name='drc_practice_angled_barrier_135_clone'>
+            <pose>14.2636 -0.030394 0 0 -0 1.84573</pose>
+            <scale>1 1 1</scale>
+            <link name='eight::link'>
+              <pose>6.19926 8.24052 0 0 -0 1.06033</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='five::link'>
+              <pose>10.8058 5.63194 0 0 -0 1.06033</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='four::link'>
+              <pose>12.342 4.76222 0 0 -0 1.06033</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='nine::link'>
+              <pose>5.06946 8.83534 0 0 -0 1.84573</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='one::link'>
+              <pose>14.2636 -0.030394 0 0 -0 0.275025</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='seven::link'>
+              <pose>7.73381 7.37097 0 0 -0 1.06033</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='six::link'>
+              <pose>9.27023 6.50162 0 0 -0 1.06033</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='ten::link'>
+              <pose>5.06946 8.83534 0.866 0 -0 1.84573</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='three::link'>
+              <pose>13.3211 3.37067 0 0 -0 0.275025</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='two::link'>
+              <pose>13.7928 1.67026 0 0 -0 0.275025</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+          <model name='drc_practice_angled_barrier_135_clone_0'>
+            <pose>-4.7036 1.42018 0 0 0 -1.13246</pose>
+            <scale>1 1 1</scale>
+            <link name='eight::link'>
+              <pose>4.59884 -5.42867 0 0 0 -1.91786</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='five::link'>
+              <pose>-0.370729 -3.60422 0 0 0 -1.91786</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='four::link'>
+              <pose>-2.02792 -2.99599 0 0 0 -1.91786</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='nine::link'>
+              <pose>5.81036 -5.83178 0 0 0 -1.13246</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='one::link'>
+              <pose>-4.7036 1.42018 0 0 0 -2.70316</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='seven::link'>
+              <pose>2.94328 -4.82034 0 0 0 -1.91786</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='six::link'>
+              <pose>1.2859 -4.21251 0 0 0 -1.91786</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='ten::link'>
+              <pose>5.81036 -5.83178 0.866 0 0 -1.13246</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='three::link'>
+              <pose>-3.22034 -1.78225 0 0 0 -2.70316</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='two::link'>
+              <pose>-3.96241 -0.18123 0 0 0 -2.70316</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+          <model name='drc_practice_angled_barrier_135_clone_clone'>
+            <pose>3.55807 8.94759 0 0 -0 2.18914</pose>
+            <scale>1 1 1</scale>
+            <link name='eight::link'>
+              <pose>-6.82029 14.0202 0 0 -0 1.40374</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='five::link'>
+              <pose>-1.60437 13.115 0 0 -0 1.40374</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='four::link'>
+              <pose>0.13494 12.8133 0 0 -0 1.40374</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='nine::link'>
+              <pose>-8.08441 14.1999 0 0 -0 2.18914</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='one::link'>
+              <pose>3.55807 8.94759 0 0 -0 0.618441</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='seven::link'>
+              <pose>-5.08257 13.7182 0 0 -0 1.40374</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='six::link'>
+              <pose>-3.34314 13.4169 0 0 -0 1.40374</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='ten::link'>
+              <pose>-8.08441 14.1999 0.866 0 -0 2.18914</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='three::link'>
+              <pose>1.5254 11.8327 0 0 -0 0.618441</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='two::link'>
+              <pose>2.54213 10.3904 0 0 -0 0.618441</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+          <model name='drc_practice_angled_barrier_45'>
+            <pose>-3.11091 4.71456 0 0 -0 0</pose>
+            <scale>1 1 1</scale>
+            <link name='eight::link'>
+              <pose>7.11389 -0.89522 0 0 0 -2.3562</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='five::link'>
+              <pose>3.38727 2.86452 0 0 0 -2.3562</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='four::link'>
+              <pose>2.14499 4.11789 0 0 0 -2.3562</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='nine::link'>
+              <pose>7.91789 -1.72747 0 0 -0 0</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='one::link'>
+              <pose>-3.11091 4.71456 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='seven::link'>
+              <pose>5.87165 0.35846 0 0 0 -2.3562</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='six::link'>
+              <pose>4.6294 1.61195 0 0 0 -2.3562</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='ten::link'>
+              <pose>7.91789 -1.72747 0.866 0 -0 0</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='three::link'>
+              <pose>0.41831 4.69839 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+            <link name='two::link'>
+              <pose>-1.34631 4.706 0 0 0 -1.5707</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+          <model name='ground_plane'>
+            <pose>0 0 0 0 -0 0</pose>
+            <scale>1 1 1</scale>
+            <link name='link'>
+              <pose>0 0 0 0 -0 0</pose>
+              <velocity>0 0 0 0 -0 0</velocity>
+              <acceleration>0 0 0 0 -0 0</acceleration>
+              <wrench>0 0 0 0 -0 0</wrench>
+            </link>
+          </model>
+  </world>
+
+</sdf>

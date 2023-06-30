@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+  </node>
+
+  <!-- Start Joint state publisher node which will publish the joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type burger"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_velodyne_gazebo)/worlds/progressive_morphological_filter.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_velodyne_description)/urdf/turtlebot3_burger.urdf.xacro" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_burger -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+    <!-- RViz -->
+  <arg name="rviz" default="true"/>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" respawn="false" output="screen" args="-d $(find turtlebot3_velodyne_gazebo)/rviz/example.rviz" />
+
+    <!-- RViz -->
+  <arg name="rviz_pmf" default="true"/>
+  <node if="$(arg rviz_pmf)" pkg="rviz" type="rviz" name="$(anon rviz_pmf)" respawn="false" output="screen" args="-d $(find turtlebot3_velodyne_gazebo)/rviz/progressive_morphological_filter.rviz" />
+
+</launch>
