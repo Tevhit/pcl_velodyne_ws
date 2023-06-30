@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlebot3_velodyne_description</name>
+  <version>1.0.0</version>
+  <description>The turtlebot3_velodyne_description package</description>
+
+  <maintainer email="tevhitkarsli@hotmail.com">tevhit</maintainer>
+
+  <license>None</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>urdf</depend>
+  <depend>xacro</depend>
+
+</package>
