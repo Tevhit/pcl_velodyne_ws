@@ -7,4 +7,7 @@
 subdirs("gtest")
 subdirs("velodyne_description")
 subdirs("basic_pcl")
+subdirs("turtlebot3_velodyne/turtlebot3_teleop")
+subdirs("turtlebot3_velodyne/turtlebot3_velodyne_gazebo")
 subdirs("velodyne_gazebo_plugins")
+subdirs("turtlebot3_velodyne/turtlebot3_velodyne_description")

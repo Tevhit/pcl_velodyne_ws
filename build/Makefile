@@ -1325,32 +1325,6 @@ topic_tools_generate_messages_lisp/fast:
 .PHONY : topic_tools_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named gazebo_ros_gencfg
-
-# Build rule for target.
-gazebo_ros_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_gencfg
-.PHONY : gazebo_ros_gencfg
-
-# fast build rule for target.
-gazebo_ros_gencfg/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/build
-.PHONY : gazebo_ros_gencfg/fast
-
-#=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_cpp
-
-# Build rule for target.
-gazebo_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_cpp
-.PHONY : gazebo_msgs_generate_messages_cpp
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
-.PHONY : gazebo_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1360,60 +1334,8 @@ trajectory_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_eus
-
-# Build rule for target.
-trajectory_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_eus
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_eus
-
-# Build rule for target.
-gazebo_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_eus
-.PHONY : gazebo_msgs_generate_messages_eus
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_eus/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
-.PHONY : gazebo_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_nodejs
-
-# Build rule for target.
-gazebo_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_nodejs
-.PHONY : gazebo_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
-.PHONY : gazebo_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named trajectory_msgs_generate_messages_cpp
-
-# Build rule for target.
-trajectory_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
-.PHONY : trajectory_msgs_generate_messages_cpp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_lisp
@@ -1425,21 +1347,60 @@ trajectory_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_lisp
+# Target rules for targets named nav_msgs_generate_messages_eus
 
 # Build rule for target.
-gazebo_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_lisp
-.PHONY : gazebo_msgs_generate_messages_lisp
+nav_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_eus
+.PHONY : nav_msgs_generate_messages_eus
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
-.PHONY : gazebo_msgs_generate_messages_lisp/fast
+nav_msgs_generate_messages_eus/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_nodejs
+
+# Build rule for target.
+nav_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_nodejs
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_cpp
+
+# Build rule for target.
+gazebo_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_cpp
+.PHONY : gazebo_msgs_generate_messages_cpp
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+.PHONY : gazebo_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named turtlebot3_drive
+
+# Build rule for target.
+turtlebot3_drive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtlebot3_drive
+.PHONY : turtlebot3_drive
+
+# fast build rule for target.
+turtlebot3_drive/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/turtlebot3_drive.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/turtlebot3_drive.dir/build
+.PHONY : turtlebot3_drive/fast
 
 #=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_nodejs
@@ -1451,8 +1412,151 @@ trajectory_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make velodyne_gazebo_plugins/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_lisp
+
+# Build rule for target.
+gazebo_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_lisp
+.PHONY : gazebo_msgs_generate_messages_lisp
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
+.PHONY : gazebo_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_py
+
+# Build rule for target.
+nav_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_py
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_cpp
+
+# Build rule for target.
+nav_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_cpp
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_lisp
+
+# Build rule for target.
+nav_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_ros_gencfg
+
+# Build rule for target.
+gazebo_ros_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_gencfg
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_py
+
+# Build rule for target.
+gazebo_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_py
+.PHONY : gazebo_msgs_generate_messages_py
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_py/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
+.PHONY : gazebo_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_eus
+
+# Build rule for target.
+trajectory_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_eus
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_nodejs
+
+# Build rule for target.
+gazebo_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_nodejs
+.PHONY : gazebo_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+.PHONY : gazebo_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_eus
+
+# Build rule for target.
+gazebo_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_eus
+.PHONY : gazebo_msgs_generate_messages_eus
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_eus/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+.PHONY : gazebo_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named trajectory_msgs_generate_messages_cpp
+
+# Build rule for target.
+trajectory_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_msgs_generate_messages_cpp
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_ros_velodyne_gpu_laser
+
+# Build rule for target.
+gazebo_ros_velodyne_gpu_laser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_velodyne_gpu_laser
+.PHONY : gazebo_ros_velodyne_gpu_laser
+
+# fast build rule for target.
+gazebo_ros_velodyne_gpu_laser/fast:
+	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build
+.PHONY : gazebo_ros_velodyne_gpu_laser/fast
 
 #=============================================================================
 # Target rules for targets named gazebo_ros_velodyne_laser
@@ -1468,30 +1572,17 @@ gazebo_ros_velodyne_laser/fast:
 .PHONY : gazebo_ros_velodyne_laser/fast
 
 #=============================================================================
-# Target rules for targets named gazebo_msgs_generate_messages_py
+# Target rules for targets named turtlebot3_velodyne_description_xacro_generated_to_devel_space_
 
 # Build rule for target.
-gazebo_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_py
-.PHONY : gazebo_msgs_generate_messages_py
+turtlebot3_velodyne_description_xacro_generated_to_devel_space_: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 turtlebot3_velodyne_description_xacro_generated_to_devel_space_
+.PHONY : turtlebot3_velodyne_description_xacro_generated_to_devel_space_
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_py/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
-.PHONY : gazebo_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named gazebo_ros_velodyne_gpu_laser
-
-# Build rule for target.
-gazebo_ros_velodyne_gpu_laser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_velodyne_gpu_laser
-.PHONY : gazebo_ros_velodyne_gpu_laser
-
-# fast build rule for target.
-gazebo_ros_velodyne_gpu_laser/fast:
-	$(MAKE) -f velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build
-.PHONY : gazebo_ros_velodyne_gpu_laser/fast
+turtlebot3_velodyne_description_xacro_generated_to_devel_space_/fast:
+	$(MAKE) -f turtlebot3_velodyne/turtlebot3_velodyne_description/CMakeFiles/turtlebot3_velodyne_description_xacro_generated_to_devel_space_.dir/build.make turtlebot3_velodyne/turtlebot3_velodyne_description/CMakeFiles/turtlebot3_velodyne_description_xacro_generated_to_devel_space_.dir/build
+.PHONY : turtlebot3_velodyne_description_xacro_generated_to_devel_space_/fast
 
 # Help Target
 help:
@@ -1595,19 +1686,26 @@ help:
 	@echo "... nodelet_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
-	@echo "... gazebo_ros_gencfg"
-	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... trajectory_msgs_generate_messages_eus"
-	@echo "... gazebo_msgs_generate_messages_eus"
-	@echo "... gazebo_msgs_generate_messages_nodejs"
-	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... gazebo_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... turtlebot3_drive"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
-	@echo "... gazebo_ros_velodyne_laser"
+	@echo "... gazebo_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... gazebo_ros_gencfg"
 	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... gazebo_msgs_generate_messages_nodejs"
+	@echo "... gazebo_msgs_generate_messages_eus"
+	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... gazebo_ros_velodyne_gpu_laser"
+	@echo "... gazebo_ros_velodyne_laser"
+	@echo "... turtlebot3_velodyne_description_xacro_generated_to_devel_space_"
 .PHONY : help
 
 

@@ -10,6 +10,8 @@
 #include <pcl/point_types.h>
 #include <pcl_ros/point_cloud.h>
 
+using namespace std;
+
 class SubscribePointCloud2Message
 {
 public:

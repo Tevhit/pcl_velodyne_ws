@@ -133,7 +133,10 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/tevhit/pcl_velodyne_ws/build/gtest/cmake_install.cmake")
   include("/home/tevhit/pcl_velodyne_ws/build/velodyne_description/cmake_install.cmake")
   include("/home/tevhit/pcl_velodyne_ws/build/basic_pcl/cmake_install.cmake")
+  include("/home/tevhit/pcl_velodyne_ws/build/turtlebot3_velodyne/turtlebot3_teleop/cmake_install.cmake")
+  include("/home/tevhit/pcl_velodyne_ws/build/turtlebot3_velodyne/turtlebot3_velodyne_gazebo/cmake_install.cmake")
   include("/home/tevhit/pcl_velodyne_ws/build/velodyne_gazebo_plugins/cmake_install.cmake")
+  include("/home/tevhit/pcl_velodyne_ws/build/turtlebot3_velodyne/turtlebot3_velodyne_description/cmake_install.cmake")
 
 endif()
 
